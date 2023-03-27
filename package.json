@@ -1,0 +1,25 @@
+{
+  "name": "clicker-api",
+  "version": "1.0.0",
+  "description": "API for clicker project",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobertoMK/clicker-api.git"
+  },
+  "author": "RobertoMK",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/RobertoMK/clicker-api/issues"
+  },
+  "homepage": "https://github.com/RobertoMK/clicker-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.22"
+  }
+}
