@@ -1,29 +1,10 @@
-import './env';
-import './database';
-import express from 'express';
-import bodyParser from 'body-parser';
-import helmet from 'helmet';
-import morgan from 'morgan';
-import routes from './routes';
-import { loggerMiddleware } from './middlewares/logger';
+import app from './app.js';
 
-class App {
-  constructor() {
-    this.server = express();
-    this.middlewares();
-    this.routes();
-  }
+const port = process.env.PORT || 3010;
 
-  middlewares() {
-    this.server.use(bodyParser.json());
-    this.server.use(morgan('combined'));
-    this.server.use(helmet());
-    this.server.use(loggerMiddleware);
-  }
-
-  routes() {
-    this.server.use(routes);
-  }
+try {
+  app.listen(port, () => console.info(`Listening on port ${port}`));
+} catch (error) {
+  console.error(error);
+  process.exit(1);
 }
-
-export default new App().server;

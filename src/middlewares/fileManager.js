@@ -1,4 +1,4 @@
-const fs = require('fs');
+import fs from 'fs';
 
 class FileManager {
   constructor(filename) {
@@ -26,4 +26,4 @@ class FileManager {
 
     return data;
   }
-}
+} export default new FileManager('./data.json');
